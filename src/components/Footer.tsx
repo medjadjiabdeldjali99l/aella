@@ -1,25 +1,8 @@
-"use client";
-
-import { motion } from "framer-motion";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 16 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay },
-  }),
-};
-
 const year = new Date().getFullYear();
 
 export default function Footer() {
   return (
-    <motion.footer
-      variants={fadeInUp}
-      initial="hidden"
-      animate="visible"
-      custom={0.75}
+    <footer
       className="w-full flex flex-col items-center gap-3 py-10 text-center border-t border-outline-variant/20 mt-auto px-5"
       role="contentinfo"
     >
@@ -57,6 +40,6 @@ export default function Footer() {
       <p className="font-sans text-label-sm text-on-surface-variant/50 mt-2">
         © {year} AELLA BY AYA. All rights reserved.
       </p>
-    </motion.footer>
+    </footer>
   );
 }
