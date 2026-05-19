@@ -1,0 +1,1 @@
+Place your logo file here and name it logo.png. The website will automatically detect and render it.
