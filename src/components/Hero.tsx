@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 
 
 const fadeInUp = {
@@ -58,9 +58,12 @@ export default function Hero() {
           className="flex flex-col items-center select-none"
         >
           {!logoError ? (
-            <img
+            <Image
               src="/logo.png"
               alt="AELLA BY AYA Logo"
+              width={220}
+              height={80}
+              priority
               className="h-20 w-auto object-contain mix-blend-multiply opacity-90 transition-opacity duration-300"
               onError={() => setLogoError(true)}
             />
